@@ -9,6 +9,10 @@ Authors: David Fisher, David Mutchler and PUT_YOUR_NAME_HERE.
 #   Then repeat for forward_by_encoders.
 #   Then repeat for the backward functions.
 
+import ev3dev.ev3 as ev3
+import time
+
+
 def test_forward_backward():
     """
     Tests the forward and backward functions, as follows:
@@ -25,7 +29,7 @@ def test_forward_backward():
     """
 
 
-def forward_seconds(seconds, speed, stop_action=):
+def forward_seconds(seconds, speed, stop_action):
     """
     Makes the robot move forward for the given number of seconds at the given speed,
     where speed is between -100 (full speed backward) and 100 (full speed forward).
@@ -55,15 +59,15 @@ def forward_by_encoders(inches, speed, stop_action):
     """
 
 
-def backward_seconds(seconds, speed, stop_action=):
+def backward_seconds(seconds, speed, stop_action):
     """ Calls forward_seconds with negative speeds to achieve backward motion. """
 
 
-def backward_by_time(inches, speed, stop_action=):
+def backward_by_time(inches, speed, stop_action):
     """ Calls forward_by_time with negative speeds to achieve backward motion. """
 
 
-def backward_by_encoders(inches, speed, stop_action=):
+def backward_by_encoders(inches, speed, stop_action):
     """ Calls forward_by_encoders with negative speeds to achieve backward motion. """
 
 

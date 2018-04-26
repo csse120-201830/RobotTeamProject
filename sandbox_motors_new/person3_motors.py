@@ -9,6 +9,10 @@ Authors: David Fisher, David Mutchler and PUT_YOUR_NAME_HERE.
 #   Then repeat for turn_left_by_encoders.
 #   Then repeat for the turn_right functions.
 
+import ev3dev.ev3 as ev3
+import time
+
+
 def test_turn_left_turn_right():
     """
     Tests the turn_left and turn_right functions, as follows:
@@ -25,7 +29,7 @@ def test_turn_left_turn_right():
     """
 
 
-def turn_left_seconds(seconds, speed, stop_action=):
+def turn_left_seconds(seconds, speed, stop_action):
     """
     Makes the robot turn in place left for the given number of seconds at the given speed,
     where speed is between -100 (full speed turn_right) and 100 (full speed turn_left).
