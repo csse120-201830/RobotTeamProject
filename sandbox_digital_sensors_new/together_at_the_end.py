@@ -70,13 +70,10 @@ def main():
     as follows:
 
         -- PRESSING   RED_UP    (in channel 2):
-             causes the SmallMotor that controls the robot's ARM/CLAW
-             to go FORWARD at XX until the TOUCH SENSOR is PRESSED,
-             at which point the SmallMotor STOPS and SETS ...
+             causes the arm/claw to go UP until the touch sensor is pressed
 
         -- PRESSING   RED_DOWN  (in channel 2):
-             causes the SmallMotor that controls the robot's ARM/CLAW
-             to go FORWARD at XX until XXX.
+             causes the arm/claw to go DOWN 14.2 revolutions of the motor
 
         -- PRESSING  BLUE_UP    (in channel 2):
              -- does a RED_UP action followed by a BLUE_DOWN action.
