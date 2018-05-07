@@ -35,7 +35,7 @@ def main():
 
     # run_test_buttons_on_brick()
     # run_test_wait_for_press_on_brick_button()
-    run_test_show_leds()
+    # run_test_show_leds()
 
 
 def run_test_buttons_on_brick():
@@ -119,10 +119,6 @@ def print_state_of_left_button_on_brick(n, seconds_per_print):
     # TODO: 3.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    button_sensor = ev3.Button()
-    for _ in range(n):
-        print(button_sensor.left)
-        time.sleep(seconds_per_print)
 
 
 def run_test_wait_for_press_on_brick_button():
@@ -183,11 +179,6 @@ def wait_for_up_button_press():
     # TODO: 4.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    button_sensor = ev3.Button()
-    while True:
-        if button_sensor.up:
-            break
-        time.sleep(0.05)
 
 
 def run_test_show_leds():

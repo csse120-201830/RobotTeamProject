@@ -36,7 +36,7 @@ def main():
 
     # run_test_touch_sensor()
     # run_test_wait_for_press()
-    run_test_show_images()
+    # run_test_show_images()
 
 
 def run_test_touch_sensor():
@@ -109,10 +109,6 @@ def print_state_of_touch_sensor(n, seconds_per_print):
     # TODO: 3.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    touch_sensor = ev3.TouchSensor()
-    for _ in range(n):
-        print(touch_sensor.is_pressed)
-        time.sleep(seconds_per_print)
 
 
 def run_test_wait_for_press():
@@ -158,10 +154,6 @@ def wait_for_press():
     # TODO: 4.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    touch_sensor = ev3.TouchSensor()
-    while True:
-        if touch_sensor.is_pressed:
-            break
 
 
 def run_test_show_images():
@@ -228,20 +220,6 @@ def show_images(list_of_images):
     Type hints:
       :type list_of_images: []
     """
-    screen = ev3.Screen()
-    touch_sensor = ev3.TouchSensor()
-
-    for k in range(len(list_of_images)):
-        print('Press the touch sensor for the next image.')
-        wait_for_press()
-
-        while True:  # Wait for RELEASE
-            if not touch_sensor.is_pressed:
-                break
-
-        print('Look at the image on the BRICK!')
-        screen.image.paste(list_of_images[k], (0, 0))
-        screen.update()
 
 
 # -----------------------------------------------------------------------------

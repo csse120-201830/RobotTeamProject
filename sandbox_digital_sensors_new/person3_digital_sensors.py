@@ -33,8 +33,9 @@ def main():
     """ Calls the   TEST   functions in this module. """
     # Uncomment these tests as you proceed through this module.
 
-    run_test_buttons_on_ir_beacon()
-    run_test_wait_for_press_on_ir_beacon_button()
+    # run_test_buttons_on_ir_beacon()
+    # run_test_wait_for_press_on_ir_beacon_button()
+    # run_test_make_sounds()
 
 
 def run_test_buttons_on_ir_beacon():
@@ -119,10 +120,6 @@ def print_state_of_blue_up_button_on_ir_beacon(n, seconds_per_print):
     # TODO: 3.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    ir_beacon_sensor = ev3.RemoteControl(1)
-    for _ in range(n):
-        print(ir_beacon_sensor.blue_up)
-        time.sleep(seconds_per_print)
 
 
 def run_test_wait_for_press_on_ir_beacon_button():
@@ -189,11 +186,6 @@ def wait_for_RED_DOWN_button_press():
     # TODO: 4.  Implement and test this function.
     #           Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    ir_beacon_sensor = ev3.RemoteControl(2)
-    while True:
-        if ir_beacon_sensor.red_down:
-            break
-        time.sleep(0.05)
 
 
 def run_test_make_sounds():
