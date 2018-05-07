@@ -196,7 +196,7 @@ def wait_for_RED_DOWN_button_press():
         time.sleep(0.05)
 
 
-def run_test_make_sound():
+def run_test_make_sounds():
     """ Tests the   make_sounds   function. """
     print()
     print('--------------------------------------------------')
@@ -204,44 +204,25 @@ def run_test_make_sound():
     print('--------------------------------------------------')
 
     print()
-    print('  *** Set the channel to 3 and use the RED_DOWN button'
-          + ' for this test ***')
-
-    print()
-    input('Press ENTER on your keyboard after you have set the channel to 3'
-          + ' and are ready to hear the sounds:')
-
-    print()
-    make_sounds()
-
-    print()
-    print('Look at the TESTING CODE to see the names of the files')
-    print('that contain the SOUNDS that you heard.')
+    print('  ** CHANGE the channel to 3. **')
+    print('Then press the IR Beacon buttons to make sounds.')
     print()
 
 
-def make_sounds(list_of_sounds):
+def make_sounds():
     """
-    Constructs an ev3.RemoteControl object for channel 3.
-    Then, for each sound in the given list of sounds:
-      1. Prints "Press and release the RED_UP button for the next sound."
-      2. Waits for the user to PRESS   the RED_UP button on the ev3 IR Beacon.
-      3. Waits for the user to RELEASE the RED_UP button.
-      4. Makes the next sound in the list.
-
-    Type hints:
-      :type list_of_sounds: []
+    Constructs an ev3.RemoteControl object for channel 2.
+    Then, repeatedly make the IR Beacon buttons behave as follows:
+      If the user presses the:
+       -- RED_UP button:    The robot makes a BEEP.
+       -- RED_DOWN button:  The robot says (i.e., speaks) some message
+            (any G-rated message is fine).
+       -- BLUE_UP button:    The robot plays the song in the file
+              "/home/robot/csse120/assets/sounds/awesome_pcm.wav"
+       -- BLUE_DOWN button:  The program breaks out of the loop.
     """
-    ir_beacon_sensor = ev3.RemoteControl(3)
 
-    for k in range(len(list_of_sounds)):
-        print('Press and release the RED_UP button for the next sound.')
-        wait_for_RED_DOWN_button_press()
 
-        print('Look at the image on the BRICK!')
-        while True:  # Wait for RELEASE
-            if not touch_sensor.is_pressed:
-                break
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
